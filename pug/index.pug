@@ -1,0 +1,391 @@
+extends layout/layout
+
+block variables
+	- var title = 'VKURSI';
+	- var description = 'Vkursi landing page';
+	- var pageClass = '';
+
+block content
+	.main
+		.main__header
+			.container.container_lg
+				.main__header__content
+					.main__header__left
+						.logo
+							a(href="./")
+								span Data BI
+					.main__header__right
+						.nav
+							.nav__item
+								a(href="./") Можливості
+							.nav__item
+								a(href="./") Галузі
+							.nav__item
+								a(href="./") Груповий звіт
+							.nav__item
+								a(href="./") API
+						.main__action
+							a(href="./").btn.btn_round.btn_sm Замовити презентацію
+		.main__content
+			.container
+				.center
+					.title
+						h2 <span class="text text_light">Великі дані для бізнесу</span> <br> Перший в Україні ВІ інструмент, який дозволяє:
+					ul.list.list_unordered
+						li Аналізувати весь бізнес України за 100+ критеріями
+						li Оцінити об’єм ринку, побудувати рейтинги компаній
+						li З математичною точністю сформувати базу потенційних клієнтів
+				.main__laptop
+					.main__laptop__frame(style="background-image: url('../img/macbook.png');")
+						.main__laptop__screen
+							div(style="background-image: url('../img/analytics.png');")
+				.main__action.actions.actions_center
+					a(href="./").link.link_blue.link_play
+						span
+							span Дивитися відео
+							span.icon-play
+					a(href="./").btn.btn_sm.btn_round.btn_outlined Замовити презентацію
+		.main__info
+			.container
+				.main__info__content
+					.title
+						h2 <span class="text text_light">Заряджай свій бізнес даними</span> <br> 100+ критеріїв для аналізу бізнесу On-line
+					ul.list.list_unordered.list_columns
+						li Тип Фізична/Юридична
+						li Регіон/населений пункт
+						li Дата реєстрації
+						li Вид діяльності (КВЕД)
+						li Країна кінцевих бенефіціарів
+						li Статус ПДВ, група ЄП
+						li Наявність дозвільних документів, ліцензій
+						li Інтелектуальна власність
+						li Наявність прав на майно, землю
+						li Транспортні засоби
+						li Кількість працівників
+						li Суди, кількість, форма судочинства
+						li Наявність боргів, заплановані перевірки
+						li Кількість тендерів та сума контрактів
+						li Сума коштів отриманих від держави
+						li Клас боржника (НБУ №351)
+						li Міжнародний кредитний рейтинг (S&P)
+						li Активи та зобов’язаннями
+						li Виручка, прибуток/збиток
+						li ЗЕД: експорт/імпорт, УКТЗЕД
+					.main__action
+						a(href="./").link.link_underline.link_primary І це лише 20 критеріїв з 100+ доступних
+					.title
+						h4
+							span.text.text_light  Якщо ви плануєте масштабувати бізнес або запуск нового продукту –  VKURSI DATA BI дозволить знайти саме ту аудиторію, для якої ваша пропозиція буде найбільш релевантною.
+	.section.section_gray#section_fields
+		.container
+			.title.title_white
+				h3 Як застосовують Vkursi Data BI в різних галузях бізнесу
+			.columns
+				.columns__list
+					.columns__item
+						h4 Банки
+						ul.list.list_unordered
+							li Оцінка об’єму всього ринку, галузі, регіону
+							li Визначення класу боржника за методикою НБУ № 351
+							li Щоденна інформація про новий бізнес
+							li Контакти потенційних клієнтів
+
+					.columns__item
+						h4 Торгівля, послуги
+						ul.list.list_unordered
+							li Пошук цільової аудиторії за КВЕД
+							li Аналіз за типом ліцензій/дозволів
+							li Сегментація компаній за виручкою, прибутком, кількістю працівників
+							li Аналіз конкуренції, частки на ринку
+					.columns__item
+						h4 Аграрний сектор
+						ul.list.list_unordered
+							li Аналіз земельного банку регіону
+							li Рейтинг компаній за земельним банком, типом власності
+							li Сегментація за кількістю транспортних засобів
+							li Аналіз ЗЕД, УКТЗЕД, країн експорту
+					.columns__item
+						h4 Маркетинг/SEO/SMM
+						ul.list.list_unordered
+							li Визначення цільової аудиторії, оцінка об’єму ринку
+							li Пошук сегмента схожого на цільовий
+							li Формування бази потенційних клієнтів
+							li Таргетована комунікація під конкретну аудиторію
+					.columns__item
+						h4 Державний сектор, громади
+						ul.list.list_unordered
+							li Економічний профайл регіонів, міст, ОТГ
+							li Порівняльний аналіз економіки регіонів
+							li Аналіз активів, нерухомого майна
+							li Аналіз державних тендерів, витрат бюджету
+							li Пошук надійних постачальників
+					.columns__item
+						h4 Юристи/аудитори
+						ul.list.list_unordered
+							li Аналіз бізнесу за судовими процесами, боргами, перевірками
+							li Рейтинги за фін. показниками, інвестиційним класом (S&P)
+							li Сегментація бізнесу за країнами кінцевих бенефіціарів
+
+	.section.section_black#section_report
+		.container
+			.report
+				.title.title_left
+					h2 <span class="text text_light">Аналіз існуючої бази</span> <br> “Груповий звіт по списку контрагентів”
+				.report__row
+					.report__item
+						p Якщо у вас є база клієнтів і ваша задача:
+						ol.list.list_ordered
+							li Комплексний аналіз і сегментація бази за різними критеріями
+							li Виявлення потреб на основі додаткових даних про клієнта
+							li Формування релевантних пропозицій під потреби конкретного клієнта
+						p Просто додайте список існуючих клієнтів до модуля “Груповий звіт” і вже за декілька хвилин, система проаналізує базу і сформує унікальний звіт.
+						a(href="./").link.link_underline.link_primary Аналізуйте дані розділів звіту On-line або завантажуйте у форматі Excel
+					.report__item
+						.report__list
+							.report__list__item
+								p Дізнайтесь хто ваші клієнти, <br> їх портрет та потреби
+							.report__list__item
+								p Аналізуйте зв’язки з іншими <br> компаніями та особами
+							.report__list__item
+								p Сформуйте список компаній, для яких <br> ваша пропозиція буде найбільш актуальною
+				.report__sliders
+					.report__images
+						.slider
+							.report__image
+								img(src="../img/questionary.png" alt="")
+							.report__image
+								img(src="../img/analytics.png" alt="")
+							.report__image
+								img(src="../img/page.png" alt="")
+							.report__image
+								img(src="../img/questionary.png" alt="")
+							.report__image
+								img(src="../img/analytics.png" alt="")
+							.report__image
+								img(src="../img/page.png" alt="")
+					.report__slider
+						.slider
+							.report__slide(data-name="Анкета")
+								h5 Анкета
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+							.report__slide(data-name="Фінанси")
+								h5 Фінанси
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+							.report__slide(data-name="Кредитний рейтинг")
+								h5 Кредитний рейтинг
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+							.report__slide(data-name="Нерухомість")
+								h5 Нерухомість
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+							.report__slide(data-name="Зв’язки")
+								h5 Зв’язки
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+							.report__slide(data-name="Суди")
+								h5 Суди
+								p.
+									Аналіз списку компаній за видом діяльності (КВЕД), регіоном, статусом реєстрації,
+									наявністю повідомлень/оголошень про припинення або реорганізацію, включення
+									до санкційних списків
+						.report__nav
+							.report__nav__container
+								.report__nav__slider
+								.report__nav__items
+			.report__info
+				.title
+					h3 Більше не потрібно перевіряти контрагентів по одному
+				.section__list
+					.section__item
+						p Завантажуйте та перевіряйте контрагентів списком до 25 000 компаній
+					.section__item
+						p Формуйте звіт на групу пов’язаних компаній безпосередньо з розділу зв’язки
+					.section__item
+						p Порівнюйте “Груповий звіт” за різні дати, миттєво виявляйте всі зміни та ризики
+				.description
+					.text.text_light.text_center
+						p.
+							Модуль груповий звіт - це новий рівень перевірки та моніторингу змін по контрагентам. <br>
+							Керівники відділів продажу, маркетологи зможуть аналізувати існуючі бази для виявлення потреб клієнтів, а спеціалісти служби безпеки, фінансового моніторингу, юридичні відділи зможуть масово перевіряти всіх контрагентів на предмет ризик-факторів і щоденно оновлювати звіт для відстеження змін
+				.actions.actions_center
+					a(href="./").link.link_blue.link_play
+						span
+							span Дивитися відео
+							span.icon-play
+					a(href="./").btn.btn_sm.btn_round.btn_outlined Замовити презентацію
+	.section.section_gray#section_api
+		.container
+			.center
+				.title
+					h2 <span class="text text_light">Працюйте в програмах до яких звикли</span> <br> АРІ інтеграція даних Vkursi Data BI з вашими програмами
+				ul.list.list_unordered
+					li Завантажуйте бази потенційних клієнтів в свої системи
+					li Збагачуйте карточки існуючих клієнтів інформацією, яка виявляє його потреби
+					li Автоматизуйте ручне заповнення даних в карточці нового клієнта
+		.section__data
+
+			.container
+				.title
+					h3
+						span.text.text_light Оберіть дані, які доможусь продавати саме вам
+			.section__data__content
+				.section__images
+					img(src="../img/page.png" alt="").section__img.section__img_page
+					img(src="../img/form.png" alt="").section__img.section__img_form
+				.container
+					.section__data__panel
+						ul.list.list_unordered
+							li Тип Фізична/Юридична
+							li Регіон/населений пункт
+							li Дата реєстрації
+							li Вид діяльності (КВЕД)
+							li Країна кінцевих бенефіціарів
+							li Статус ПДВ, група ЄП
+							li Наявність дозвільних документів, ліцензій
+							li Інтелектуальна власність
+							li Наявність прав на майно, землю
+							li Транспортні засоби
+							li Кількість працівників
+							li Суди, кількість, форма судочинства
+							li Наявність боргів, заплановані перевірки
+							li Кількість тендерів та сума контрактів
+							li Сума коштів отриманих від держави
+							li Клас боржника (НБУ №351)
+							li Міжнародний кредитний рейтинг (S&P)
+							li Активи та зобов’язаннями
+							li Виручка, прибуток/збиток
+							li ЗЕД: експорт/імпорт, УКТЗЕД
+		.container
+			.title
+				h3
+					span.text.text_light Переваги АРІ для вашого бізнесу
+			.section__columns
+				.section__column
+					.title
+						h6 Збільшення продажів/конверсії
+					ul.list.list_unordered
+						li Готовий профіль клієнта та розуміння його потреб
+						li Робота з аудиторією, для якої ваша пропозиція найбільш актуальна
+						li Формування релевантних пропозицій під потреби клієнта
+				.section__column
+					.title
+						h6 Автоматизація ручних процесів
+					ul.list.list_unordered
+						li Автоматизація рутинної роботи по збору інформації з різних джерел та ручного внесення даних в картку клієнта
+						li Відсутність помилок в документах
+						li Не потребує навчання –  співробітники працюють в програмах до яких звикли
+
+	.section.section_black#section_performance
+		.container
+			.title.title_white
+				h3 Vkursi Data BI в цифрах
+			.performance
+				.performance__list
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="27000">0</span>+
+						.performance__item__descr
+							p Аграріїв з оформленим правам на землю
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="17000">0</span>+
+						.performance__item__descr
+							p Експортерів/імпортерів
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="31000">0</span>+
+						.performance__item__descr
+							p Компаній з виручкою від 20 000 000 грн
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="270000">0</span>+
+						.performance__item__descr
+							p Суб’єктів мають діючі ліцензії/дозволи
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="100000">0</span>+
+						.performance__item__descr
+							p Заплановано перевірок на 2020 рік
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="44000000">0</span>+
+						.performance__item__descr
+							p Судових документів в яких згадуються Юрособи
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="62000">0</span>+
+						.performance__item__descr
+							p Компаній з штатом від 10 працівників
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="10000">0</span>+
+						.performance__item__descr
+							p Українських компаній з іноземними бенефіціарами
+	.section.section_black
+		.container
+			.title.title_white
+				h3 Щоденне оновлення даних з 70+ джерел
+			.performance
+				.performance__list.performance__list_lg
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="10000">0</span>+
+						.performance__item__descr
+							p Нових Юросіб і ФОП реєструється щодня
+							span (Понад 200 юридичних осіб і 800 ФОП)
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="25000">0</span>+
+						.performance__item__descr
+							p Нових судових рішень та засідань щодня
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="1000">0</span>+
+						.performance__item__descr
+							p Відбувається змін в ЄДР щодня
+							span (Зміни: засновників, КВЕД, назви, адреси)
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="1000">0</span>+
+						.performance__item__descr
+							p Нових ліцензій та дозволів щодня
+							span (30+ ліцензійних та дозвільних джерел)
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="1000">0</span>+
+						.performance__item__descr
+							p Нових платників ПДВ щодня
+					.performance__item
+						.performance__item__indicator
+							span <span class="count" data-to="100000">0</span>+
+						.performance__item__descr
+							p Отримує бізнес від державних установ
+							span (Всі платежі від 1 грн. Дані з порталу E-DATA)
+	.section.section_white#section_friends
+		.container
+			.title.title_black
+				h3 Друзі та клієнти VKURSI
+
+			include includes/modules/_friends
+
+			.section__callback
+				.title.title_black
+					h4 Приєднуйтесь <br> Відкривайте нові можливості для розвитку вашого бізнесу
+				.actions
+					a(href="./").btn.btn_round.btn_lg Замовити консультацію менеджера
+
+block script
+	script(type='text/javascript').

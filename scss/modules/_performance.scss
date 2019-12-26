@@ -1,0 +1,43 @@
+.performance {
+
+    $performance: &;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &_lg {
+            #{$performance} {
+                &__item {
+                    width: 33.33333%;
+                }
+            }
+        }
+    }
+
+    &__item {
+        width: 25%;
+        padding: 0 15px;
+        margin: 28px 0;
+
+        &__indicator {
+            font-size: $lgFontSize;
+            line-height: 36px;
+            color: $primary-color;
+            margin: 0 0 4px;
+        }
+
+        &__descr {
+            font-size: $lgFontSize;
+            line-height: 36px;
+            color: $lighter-gray;
+
+
+            & > span {
+                font-size: $mainFontSize;
+                line-height: 24px;
+            }
+        }
+    }
+}

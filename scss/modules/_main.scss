@@ -1,0 +1,155 @@
+.main {
+    padding: 0 0 100px;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        max-width: 1334px;
+        padding: 0 0 57.36%;
+        background: radial-gradient(50% 50% at 50% 50%, #5D2692 23.06%, rgba(93, 38, 146, 0) 100%);
+        opacity: 0.7;
+        pointer-events: none;
+    }
+
+    $main: &;
+
+    .title {
+        margin: 0 0 20px;
+    }
+
+    &__header {
+        &__content {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-bottom: 1px;
+
+            &:before {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background: #ffffff;
+                background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+                background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+            }
+        }
+
+        &__left {
+            width: 185px;
+            flex-shrink: 0;
+            padding: 0 15px 0 0;
+        }
+
+        &__right {
+            width: calc(100% - 200px);
+            padding: 0 0 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__laptop {
+        margin: 20px auto;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(100vw) scale(0.6)  rotateX(70deg) ;
+        max-width: 1060px;
+
+        &:hover {
+            //transform: perspective(0) rotateX(0) scale(1);
+        }
+
+        &__frame {
+            padding: 0 0 60.702%;
+            position: relative;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow: hidden;
+            background-size: contain;
+        }
+
+        &__screen {
+            width: 82.667%;
+            padding: 0 0 53.43%;
+            position: absolute;
+            left: 0;
+            top: 3%;
+            right: 0;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 2px;
+
+            & > div {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 48px;
+        text-align: center;
+    }
+
+    &__info {
+        margin-top: 62px;
+
+        &__content {
+            padding: 0 120px;
+        }
+
+        .list {
+            margin: 0 0 20px;
+
+            &_columns {
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            li {
+                color: $light;
+            }
+        }
+
+        #{$main} {
+            &__action {
+                text-align: center;
+                margin: 0 0 32px;
+            }
+        }
+    }
+
+    .nav {
+        &__item {
+            &:not(:last-child){
+                margin-right: 24px;
+            }
+
+            a {
+                padding: 15px 0;
+            }
+        }
+    }
+}

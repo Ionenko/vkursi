@@ -1,0 +1,30 @@
+.columns {
+    &__list {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin: 24px 15px;
+        width: calc(33.33333% - 30px);
+        background: $default-color;
+        border-radius: 4px;
+        padding: 15px 15px 20px;
+
+        & > h3, h4, h5, h6 {
+            font-size: $lgFontSize;
+            line-height: 36px;
+            color: $light;
+            margin: 0 0 12px;
+        }
+
+        .list {
+            li {
+                position: relative;
+                transform: translate(10px, 0%);
+                opacity: 0;
+            }
+        }
+    }
+}

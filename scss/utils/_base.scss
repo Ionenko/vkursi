@@ -1,0 +1,153 @@
+.title {
+    color: $mainFontColor;
+    font-size: $lgFontSize;
+    line-height: 36px;
+    margin: 0 0 20px;
+    text-align: center;
+    font-weight: 500;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &_black {
+        color: $default-color;
+    }
+}
+
+.text {
+
+    &_center {
+        text-align: center;
+    }
+
+    &_primary {
+        color: $primary-color;
+    }
+
+    &_light {
+        color: $lighter-gray;
+    }
+}
+
+.description {
+    margin: 32px 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.list {
+    list-style: none;
+
+    li {
+        line-height: 24px;
+        color: $lighter-gray;
+        margin: 0 0 4px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &_unordered {
+        li {
+            padding: 0 0 0 24px;
+            position: relative;
+
+            &:before {
+                content: "\e900";
+                color: #4edadd;
+                font-family: icomoon!important;
+                speak: none;
+                font-style: normal;
+                font-weight: 400;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-size: 8px;
+                position: absolute;
+                left: 0;
+                top: 8px;
+            }
+        }
+    }
+
+    &_ordered {
+        counter-reset: section;
+        list-style-type: none;
+
+        li {
+            margin: 0 0 4px;
+            color: $light;
+            padding: 0 0 0 24px;
+            position: relative;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        & > li {
+
+            &:before {
+                counter-increment: section;
+                content: counters(section, ".")")";
+                color: $primary-color;
+                font-size: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            ol {
+                li {
+                    &:before {
+                        content: counters(section, ".") "";
+                    }
+                }
+            }
+        }
+    }
+
+    &_columns {
+        column-count: 2;
+        column-gap: 60px;
+    }
+}
+
+.actions {
+    text-align: center;
+
+    &_center {
+        text-align: center;
+        margin: 38px 0 0;
+
+        a {
+            margin: 0 25px;
+        }
+    }
+}
+
+.center {
+    text-align: center;
+
+    .list {
+        margin: auto;
+        display: inline-block;
+        text-align: left;
+
+        li {
+            color: $light;
+        }
+    }
+}

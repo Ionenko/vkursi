@@ -1,0 +1,5 @@
+/js/cached/
+node_modules
+src/bower
+bower
+.idea

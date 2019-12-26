@@ -1,0 +1,131 @@
+.link {
+    position: relative;
+    font-size: $mainFontSize;
+    line-height: 23px;
+    cursor: pointer;
+    vertical-align: middle;
+
+    [class*=" icon-"], [class^=icon-] {
+        line-height: inherit;
+        font-size: inherit;
+        vertical-align: middle;
+        margin: 0 8px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &_underline {
+        &:before {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 0;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+            bottom: 0;
+            top: auto;
+            font-size: 0;
+            background: #ffffff;
+            background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+            background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 20%, #fff 80%, rgba(255,255,255,0) 100%);
+            transition: width .2s ease-in;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+
+    &_primary {
+        color: $primary-color;
+
+        &:before {
+            background: $primary-color;
+            background: -moz-linear-gradient(left, rgba(78, 218, 221,0) 0%, $primary-color 20%, $primary-color 80%, rgba(78, 218, 221,0) 100%);
+            background: -webkit-linear-gradient(left, rgba(78, 218, 221,0) 0%, $primary-color 20%, $primary-color 80%, rgba(78, 218, 221,0) 100%);
+            background: linear-gradient(to right, rgba(78, 218, 221,0) 0%, $primary-color 20%, $primary-color 80%, rgba(78, 218, 221,0) 100%);
+        }
+    }
+
+    &_blue {
+        color: $blue;
+    }
+
+    &_play {
+        font-size: 16px;
+        line-height: 24px;
+
+        [class*=" icon-"], [class^=icon-] {
+            font-size: 24px;
+        }
+    }
+
+    &_toggle {
+        &:before {
+
+        }
+    }
+
+}
+
+.btn {
+    display: inline-block;
+    outline: 0 none;
+    color: $mainFontColor;
+    text-decoration: none;
+    background: $primary-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    &:hover {
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    $btn: &;
+
+    &_round {
+        border-radius: 90px;
+    }
+
+    &_sm {
+        padding: 4px 10px;
+        line-height: 23px;
+        font-size: $mainFontSize;
+        font-weight: $mainFontWeight;
+    }
+
+    &_lg {
+        padding: 16px 32px;
+        font-size: 24px;
+        line-height: 36px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &_outlined {
+        box-shadow: none;
+        border: 1px solid $border-base;
+        background: none;
+
+        &:hover {
+            background: $primary-color;
+            border-color: $primary-color;
+        }
+    }
+
+}
+
